@@ -435,6 +435,14 @@ namespace System.Windows.Forms.DataVisualization.Charting {
 			}
 			RecalculateAxesScaleRequired?.Invoke(this, new RecalculateAxesScaleRequiredEventArgs(this.Name, this.ChartArea));//軸範囲の再計算を要求する
 		}
+
+		/// <summary>
+		/// データポイントを消去します。
+		/// </summary>
+		public void Clear() {
+			rawPoints.Clear();
+			Points.Clear();
+		}
 		#endregion
 	}
 
